@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Save Ideas You Like</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin-left: 10px;
+      background-color: #e60000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c30000;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    li {
+      background: white;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .remove-btn {
+      background: #bbb;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💡 Save Ideas You Like</h1>
+  <p>Collect your favorite ideas and inspirations to revisit and use later.</p>
+
+  <input type="text" id="saveInput" placeholder="Type your idea here..." />
+  <button onclick="saveIdea()">Save</button>
+
+  <ul id="ideaList"></ul>
+
+  <script>
+    function saveIdea() {
+      const input = document.getElementById("saveInput");
+      const idea = input.value.trim();
+      if (!idea) {
+        alert("Please enter an idea first.");
+        return;
+      }
+
+      let ideas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
+      ideas.push(idea);
+      localStorage.setItem("savedIdeas", JSON.stringify(ideas));
+
+      input.value = "";
+      displayIdeas();
+    }
+
+    function displayIdeas() {
+      const ideas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
+      const list = document.getElementById("ideaList");
+      list.innerHTML = "";
+
+      ideas.forEach((idea, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span>${idea}</span>
+          <button class="remove-btn" onclick="removeIdea(${index})">Remove</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    function removeIdea(index) {
+      let ideas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
+      ideas.splice(index, 1);
+      localStorage.setItem("savedIdeas", JSON.stringify(ideas));
+      displayIdeas();
+    }
+
+    // Load saved ideas when page loads
+    window.onload = displayIdeas;
+  </script>
+
+</body>
+</html>

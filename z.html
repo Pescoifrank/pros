@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>System Development Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .intro-box {
+      width: 300px;
+      margin: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    .intro-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .intro-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .intro-box h3 {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .category-bar {
+      display: flex;
+      overflow-x: auto;
+      background-color: #1e1e2f;
+      padding: 10px;
+    }
+
+    .category-bar a {
+      padding: 10px 20px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .category-bar a:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .section-wrapper {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .overlay h2,
+    .overlay p {
+      color: white;
+    }
+
+    .overlay a {
+      display: inline-block;
+      background-color: #ffcc00;
+      padding: 10px 20px;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 320px;
+      border: none;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="intro-section">
+    <div class="intro-box">
+      <img src="https://img.freepik.com/free-photo/computer-program-coding-screen_53876-138060.jpg" alt="Coding">
+      <h3>Learn Programming</h3>
+    </div>
+    <div class="intro-box">
+      <img src="https://img.freepik.com/free-photo/modern-technology-devices_23-2147991032.jpg" alt="System Thinking">
+      <h3>System Thinking</h3>
+    </div>
+    <div class="intro-box">
+      <img src="https://img.freepik.com/free-photo/e-learning-education-internet-technology-webinar-online-courses-concept_53876-138062.jpg" alt="Interactive Learning">
+      <h3>Interactive Learning</h3>
+    </div>
+  </section>
+
+  <div class="category-bar">
+    <a onclick="showContent('webDevelopment')">Web Development</a>
+    <a onclick="showContent('aiMl')">AI & ML</a>
+    <a onclick="showContent('uiux')">UI/UX Design</a>
+    <a onclick="showContent('systemStructure')">System Structure</a>
+    <a onclick="showContent('desktopApps')">Desktop Apps</a>
+    <a onclick="showContent('cloudDev')">Cloud Development</a>
+    <a onclick="showContent('mobileApps')">Mobile App Development</a>
+    <a onclick="showContent('cybersecurity')">Cybersecurity</a>
+    <a onclick="showContent('dataScience')">Data Science</a>
+    <a onclick="showContent('neuralNetworks')">Neural Networks</a>
+    <a onclick="showContent('operatingSystems')">Operating Systems</a>
+  </div>
+
+  <!-- Existing sections remain unchanged -->
+
+  <div id="mobileApps" class="content-section">
+    <div class="section-wrapper" style="background-image: url('https://img.freepik.com/free-photo/top-view-smartphone-development_23-2149687451.jpg');">
+      <div class="overlay">
+        <h2>Mobile App Development</h2>
+        <p>Design and build mobile applications for Android and iOS platforms.</p>
+        <iframe src="https://www.youtube.com/embed/X9EJ5f1ahZ8" allowfullscreen></iframe>
+        <a href="https://cs.wmich.edu/gupta/teaching/cs5950/MobileApps.pdf" target="_blank">Download PDF Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="cybersecurity" class="content-section">
+    <div class="section-wrapper" style="background-image: url('https://img.freepik.com/free-photo/hacker-dark-background_23-2148160613.jpg');">
+      <div class="overlay">
+        <h2>Cybersecurity</h2>
+        <p>Protect systems and data from cyber threats and vulnerabilities.</p>
+        <iframe src="https://www.youtube.com/embed/inWWhr5tnEA" allowfullscreen></iframe>
+        <a href="https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Overview.pdf" target="_blank">Download PDF Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="dataScience" class="content-section">
+    <div class="section-wrapper" style="background-image: url('https://img.freepik.com/free-photo/statistics-graphic-graph-chart-diagram_53876-124664.jpg');">
+      <div class="overlay">
+        <h2>Data Science</h2>
+        <p>Analyze and interpret complex data to aid decision-making and predictions.</p>
+        <iframe src="https://www.youtube.com/embed/xC-c7E5PK0Y" allowfullscreen></iframe>
+        <a href="https://www.cs.cmu.edu/~15251/lectures/datascience.pdf" target="_blank">Download PDF Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="neuralNetworks" class="content-section">
+    <div class="section-wrapper" style="background-image: url('https://img.freepik.com/free-photo/brain-digital-concept-background_53876-110119.jpg');">
+      <div class="overlay">
+        <h2>Neural Networks</h2>
+        <p>Delve into the architecture and training of deep learning models.</p>
+        <iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe>
+        <a href="https://cs231n.github.io/assets/nn1.pdf" target="_blank">Download PDF Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="operatingSystems" class="content-section">
+    <div class="section-wrapper" style="background-image: url('https://img.freepik.com/free-photo/computer-screen-system-administration_23-2149171401.jpg');">
+      <div class="overlay">
+        <h2>Operating Systems</h2>
+        <p>Understand the role of operating systems in managing hardware and software resources.</p>
+        <iframe src="https://www.youtube.com/embed/vBURTt97EkA" allowfullscreen></iframe>
+        <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank">Download PDF Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = section.id === id ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

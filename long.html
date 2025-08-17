@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Development Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x400/?technology,web') center/cover no-repeat;
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .intro-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 1100px;
+    }
+
+    .box {
+      width: 300px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .box::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .search-box {
+      max-width: 700px;
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: white;
+      width: 100%;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #0073ff;
+      border: none;
+      color: white;
+      padding: 0 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .category-slider {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .category-item {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      font-weight: 500;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background-color: #0073ff;
+      color: white;
+    }
+
+    .content-section {
+      display: none;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #e0ecff, #f9fcff);
+      min-height: 100vh;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    .content-section iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+    .pdf-link {
+  display: inline-block;
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  position: inherit;
+  align-items: center;
+
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="color: #000;">Welcome to Software Development Hub</h1>
+    <p style="color: #000;">Explore various categories of software development</p>
+  </header>
+
+  <div class="intro-boxes">
+    <div class="box" data-title="Web Design" style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg');"></div>
+    <div class="box" data-title="Mobile Apps" style="background-image: url('https://media.istockphoto.com/id/1700567210/photo/a-software-development-designer-or-programmer-is-typing-on-a-computer-to-create-an.webp?a=1&b=1&s=612x612&w=0&k=20&c=nDrEfYYghLAaTCcl7QkyPnQWxe3_CIM5XeVEoSD8nIM=');"></div>
+    <div class="box" data-title="Game Dev" style="background-image: url('https://media.istockphoto.com/id/2205982417/photo/web-ui-ux-design-web-development-concept-a-web-developer-works-on-a-website-surrounded-by.webp?a=1&b=1&s=612x612&w=0&k=20&c=VvjLoz98ur0OYeq-4K2rIRVCzopXrfEVoLUfPPTcCFs=');"></div>
+  </div>
+
+  <div class="search-container">
+    <form class="search-box" action="#">
+      <input type="text" placeholder="Search software development..." />
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+
+  <div class="category-slider">
+    <span class="category-item" onclick="showCategory('system')">System Software</span>
+    <span class="category-item" onclick="showCategory('application')">Application Software</span>
+    <span class="category-item" onclick="showCategory('web')">Web Development</span>
+    <span class="category-item" onclick="showCategory('mobile')">Mobile Apps</span>
+    <span class="category-item" onclick="showCategory('game')">Game Development</span>
+    <span class="category-item" onclick="showCategory('uiux')">UI/UX Design</span>
+    <span class="category-item" onclick="showCategory('ai')">AI & ML Integration</span>
+    <span class="category-item" onclick="showCategory('api')">APIs & Microservices</span>
+    <span class="category-item" onclick="showCategory('devops')">DevOps</span>
+    <span class="category-item" onclick="showCategory('version')">Version Control</span>
+    <span class="category-item" onclick="showCategory('embedded')">Embedded Software</span>
+  </div>
+
+  <div id="system" class="content-section">
+    <h2>System Software</h2>
+    <p>This section provides an overview of system software including OS, drivers, etc.</p>
+    <iframe src="https://www.youtube.com/embed/m8Icp_Cid5o?si=g7L_9-_pgSGOwWkZ" allowfullscreen></iframe>
+    <a class="pdf-link" href="https://example.com/system_software_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="application" class="content-section">
+    <h2>Application Software</h2>
+    <p>Application software helps users perform specific tasks like MS Office, Photoshop, etc.</p>
+    <iframe src="https://www.youtube.com/embed/jniJeamcIUU?si=gbqQ6E_A-2jyisLT"  allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/system_software_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="web" class="content-section">
+    <h2>Web Development</h2>
+    <p>Web development involves building websites and web apps using HTML, CSS, JavaScript, etc.</p>
+    <iframe src="https://www.youtube.com/embed/B-ytMSuwbf8?si=Q2ghKKzWb0_LKEqq"  allowfullscreen></iframe>
+    <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="mobile" class="content-section">
+    <h2>Mobile Application Development</h2>
+    <p>Mobile development covers Android, iOS, cross-platform tools like Flutter, React Native.</p>
+    <iframe src="https://www.youtube.com/embed/BxM2DayeOBE?si=XgahmFHzgnQza0xr"   allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="game" class="content-section">
+    <h2>Game Development</h2>
+    <p>Learn how to create games using engines like Unity and Unreal.</p>
+    <iframe src="https://www.youtube.com/embed/I549C6SmUnk?si=qd_QFC-Wo1cusCwa" allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="uiux" class="content-section">
+    <h2>UI/UX Design</h2>
+    <p>UI/UX design focuses on user interface and experience — essential in every software product.</p>
+    <iframe src="https://www.youtube.com/embed/c9Wg6Cb_YlU?si=VOxB7gg9Z3RUVyqJ"   allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="ai" class="content-section">
+    <h2>AI & ML Integration</h2>
+    <p>Artificial Intelligence and Machine Learning are transforming software with smart predictions and automation.</p>
+    <iframe src="https://www.youtube.com/embed/D5xz9sv8v24?si=PXc5MVSJzdxq4CpI"  allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+      <iframe src="https://www.youtube.com/embed/G9qYGasRc54?si=FHFhTnAMJg4_a2HX"   allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="api" class="content-section">
+    <h2>APIs & Microservices</h2>
+    <p>APIs connect software components, and microservices architecture breaks applications into independent modules.</p>
+   <iframe src="https://www.youtube.com/embed/WXsD0ZgxjRw?si=kTBSOO6iUxeiJAP4"  allowfullscreen></iframe>
+   <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+    <iframe src="https://www.youtube.com/embed/ByYyk8eMG6c?si=Z8IpRINSCQ_zbF6V"   allowfullscreen></iframe>
+      <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="devops" class="content-section">
+    <h2>DevOps</h2>
+    <p>DevOps combines development and operations to improve collaboration and accelerate deployment cycles.</p>
+    <iframe src="https://www.youtube.com/embed/0_gLhHQm9cg?si=mHFL4j6_zckZ5Uu0"  allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="version" class="content-section">
+    <h2>Version Control</h2>
+    <p>Version control helps developers track and manage code changes efficiently with tools like Git and GitHub.</p>
+    <iframe src="https://www.youtube.com/embed/zTjRZNkhiEU?si=xn4R7pH3RxnnSkVC"  allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div id="embedded" class="content-section">
+    <h2>Embedded Software</h2>
+    <p>Embedded software runs on hardware devices and powers systems like IoT, appliances, and vehicles.</p>
+    <iframe src="https://www.youtube.com/embed/D7L1SmjQ3fo?si=SiHvKN7yyA_jQHIO"  allowfullscreen></iframe>
+     <a class="pdf-link" href="https://example.com/web_development_notes.pdf" target="_blank">Download PDF Notes</a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 PescoiFrank. All rights reserved.
+  </div>
+
+  <script>
+    function showCategory(id) {
+      document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    <script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let players = {};
+
+  function loadIframe(iframe) {
+    if (!iframe.src) {
+      iframe.src = iframe.dataset.src; // Load video only when needed
+    }
+  }
+
+  function onYouTubeIframeAPIReady() {
+    document.querySelectorAll('iframe').forEach((iframe, index) => {
+      const videoIdMatch = iframe.dataset.src.match(/embed\/([^?]+)/);
+      if (videoIdMatch) {
+        iframe.id = "yt-player-" + index;
+        // We will only create players when iframe is loaded
+      }
+    });
+  }
+
+  function initPlayer(iframe) {
+    if (!players[iframe.id]) {
+      players[iframe.id] = new YT.Player(iframe.id);
+    }
+  }
+
+  function showCategory(id) {
+    // Pause all videos in other sections
+    document.querySelectorAll('.content-section').forEach(section => {
+      section.classList.remove('active');
+      section.querySelectorAll('iframe').forEach(iframe => {
+        if (players[iframe.id]) {
+          players[iframe.id].pauseVideo();
+        }
+      });
+    });
+
+    // Show the chosen section
+    const activeSection = document.getElementById(id);
+    activeSection.classList.add('active');
+
+    // Load & prepare videos in active section
+    activeSection.querySelectorAll('iframe').forEach(iframe => {
+      loadIframe(iframe);
+      initPlayer(iframe);
+    });
+  }
+</script>
+  </script>
+</body>
+</html>

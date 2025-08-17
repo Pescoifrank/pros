@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Violation Center</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1a73e8;
+      margin-top: 20px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reports & Violation Center</h1>
+    <p>Help us maintain safety, security, and ethical use of technology</p>
+  </header>
+
+  <div class="container">
+    <h2>About This Center</h2>
+    <p>
+      The Reports & Violation Center allows you to report any activity that violates
+      ethical, legal, or operational guidelines in the fields of:
+    </p>
+    <ul>
+      <li>Cyber Security</li>
+      <li>Programming</li>
+      <li>Information Science</li>
+      <li>Software Development</li>
+      <li>Computer Networks & Communication</li>
+    </ul>
+
+    <h2>When to Report</h2>
+    <p>
+      You should file a report if you witness or suspect:
+    </p>
+    <ul>
+      <li>Unauthorized access to systems or sensitive data</li>
+      <li>Malicious software or code exploitation</li>
+      <li>Infringement of intellectual property in programming</li>
+      <li>Network misuse or communication breaches</li>
+      <li>Violations of user privacy or data rights</li>
+    </ul>
+
+    <h2>Submit a Report</h2>
+    <form>
+      <label for="category">Type of Violation</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select a Category --</option>
+        <option>Cyber Security</option>
+        <option>Programming</option>
+        <option>Information Science</option>
+        <option>Software Development</option>
+        <option>Computer Networks & Communication</option>
+        <option>Other</option>
+      </select>
+
+      <label for="details">Describe the Incident</label>
+      <textarea id="details" name="details" rows="5" placeholder="Provide as much detail as possible..." required></textarea>
+
+      <label for="contact">Your Contact Email (optional)</label>
+      <input type="email" id="contact" name="contact" placeholder="you@example.com">
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+</body>
+</html>

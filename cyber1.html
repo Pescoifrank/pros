@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Platform</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7') center/cover no-repeat;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      min-height: 250px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .intro-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .intro-images img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+      gap: 15px;
+      white-space: nowrap;
+    }
+
+    .slider::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+      background: #0073ff;
+      border-radius: 3px;
+    }
+
+    .category {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background: #0073ff;
+      color: white;
+    }
+
+    .content-section {
+      display: none;
+      animation: fadeIn 1s ease;
+      background: #fff;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 15px;
+      background: yellow;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1 style="color: black;">Cybersecurity Platform</h1>
+    <p style="color: black;">Explore key areas of cybersecurity from network security, ethical hacking, data protection, to malware analysis. Learn through videos, notes, and interactive content.</p>
+  </div>
+
+  <div class="intro-images">
+    <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Cybersecurity 1">
+    <img src="https://media.istockphoto.com/id/2158208796/photo/security-solutions-concept-glowing-shield-with-arrow-sign-on-the-abstract-main-cpu-on-circuit.webp?a=1&b=1&s=612x612&w=0&k=20&c=TRzxKsostIAgoHr_RL0LyfG5Ilvx3uIJfeJmPWg7_FE=" alt="Cybersecurity 2">
+    <img src="https://media.istockphoto.com/id/2150426978/photo/cybersecurity-and-privacy-concepts-to-protect-data-lock-icon-and-internet-network-security.webp?a=1&b=1&s=612x612&w=0&k=20&c=b0GiK_TWwAtog3mUsMqCu7lMJwUChNiAOVRp8QlAuNE=" alt="Cybersecurity 3">
+  </div>
+
+  <div class="slider">
+    <div class="category" onclick="showContent('network')">Network Security</div>
+    <div class="category" onclick="showContent('malware')">Malware Analysis</div>
+    <div class="category" onclick="showContent('hacking')">Ethical Hacking</div>
+    <div class="category" onclick="showContent('forensics')">Digital Forensics</div>
+    <div class="category" onclick="showContent('dataprotection')">Data Protection</div>
+    <div class="category" onclick="showContent('appsec')">Application Security</div>
+    <div class="category" onclick="showContent('infosec')">Information Security</div>
+    <div class="category" onclick="showContent('cloudsec')">Cloud Security</div>
+    <div class="category" onclick="showContent('endpoint')">Endpoint Security</div>
+    <div class="category" onclick="showContent('identity')">Identity & Access Management</div>
+    <div class="category" onclick="showContent('ops')">Operational Security</div>
+  </div>
+
+  <div id="network" class="content-section">
+    <h2>Network Security</h2>
+    <p>Protect your systems and data from unauthorized access and attacks. Learn about firewalls, VPNs, and intrusion detection systems.</p>
+    <iframe src="https://www.youtube.com/embed/zIWGjkr0ENE?si=QIaJqdQev1qwVkUV" allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="malware" class="content-section">
+    <h2>Malware Analysis</h2>
+    <p>Understand malicious software, how it works, and how to analyze and combat it effectively using modern tools and techniques.</p>
+    <iframe src="https://www.youtube.com/embed/qA0YcYMRWyI?si=YpSySnZ-isAKk0Rn"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="hacking" class="content-section">
+    <h2>Ethical Hacking</h2>
+    <p>Learn penetration testing, vulnerability assessment, and how ethical hackers protect organizations against cyber threats.</p>
+    <iframe src="https://www.youtube.com/embed/fNzpcB7ODxQ?si=3ccfKvf1IAphkqOh"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="forensics" class="content-section">
+    <h2>Digital Forensics</h2>
+    <p>Recover and investigate digital evidence to support legal cases or trace unauthorized activities.</p>
+    <iframe src="https://www.youtube.com/embed/SEzeyvqgHzc?si=2Y7DK5IC5LLdpmNH"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="dataprotection" class="content-section">
+    <h2>Data Protection</h2>
+    <p>Implement techniques and regulations like GDPR to ensure privacy, compliance, and secure handling of personal information.</p>
+    <iframe src="https://www.youtube.com/embed/njPY7pQTRWg?si=L7xNLbLnPvPlqTMC"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="appsec" class="content-section">
+    <h2>Application Security</h2>
+    <p>Focuses on keeping software and devices free of threats. Proper security measures at the application level can prevent data breaches.</p>
+    <iframe src="https://www.youtube.com/embed/ajLk4Hg0lCM?si=eAGeEzeb8017pMwz" allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="infosec" class="content-section">
+    <h2>Information Security</h2>
+    <p>Protecting the confidentiality, integrity and availability of data regardless of the form it takes.</p>
+    <iframe src="https://www.youtube.com/embed/xKaQHBbtaX0?si=AVaNg09JZW-OI0yr" allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="cloudsec" class="content-section">
+    <h2>Cloud Security</h2>
+    <p>Refers to a broad set of policies, technologies, and controls deployed to protect data, applications, and the associated infrastructure of cloud computing.</p>
+    <iframe src="https://www.youtube.com/embed/Ijkvx1u0w6o?si=u4fOkZjXyyyueTBa"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="endpoint" class="content-section">
+    <h2>Endpoint Security</h2>
+    <p>Securing endpoints or end-user devices such as desktops, laptops, and mobile devices from cyber threats.</p>
+    <iframe src="https://www.youtube.com/embed/JYTksiyRB98?si=UtEAky8yg71NtBZg"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="identity" class="content-section">
+    <h2>Identity & Access Management</h2>
+    <p>Ensures the right individuals access the right resources at the right times for the right reasons.</p>
+    <iframe src="https://www.youtube.com/embed/5uNifnVlBy4?si=I26kIeOPH_ZnzSGM"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="ops" class="content-section">
+    <h2>Operational Security</h2>
+    <p>Process of protecting individual pieces of data that could be grouped together to give the bigger picture.</p>
+    <iframe src="https://www.youtube.com/embed/rMSgnOYcEVE?si=Un0N0AxULcZeY08D"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <footer>
+    &copy; pescoifrank@2025
+  </footer>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

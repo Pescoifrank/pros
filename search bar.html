@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programming Languages</title>
+
+  <!-- Font Awesome for search icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 30px;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 15px 50px 15px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .search-bar .search-icon {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0073ff;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .languages-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .language-card {
+      min-width: 180px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+    }
+
+    .language-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .language-card a {
+      text-decoration: none;
+      color: #0073ff;
+      font-weight: bold;
+    }
+
+    .language-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <i class="fas fa-search search-icon"></i>
+  </div>
+
+  <div class="languages-container">
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+      <a href="pdfs/java-course.pdf" target="_blank">Java</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Python">
+      <a href="pdfs/python-course.pdf" target="_blank">Python</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+      <a href="pdfs/cpp-course.pdf" target="_blank">C++</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="JavaScript">
+      <a href="pdfs/javascript-course.pdf" target="_blank">JavaScript</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C#">
+      <a href="pdfs/csharp-course.pdf" target="_blank">C#</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="PHP">
+      <a href="pdfs/php-course.pdf" target="_blank">PHP</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML">
+      <a href="pdfs/html-course.pdf" target="_blank">HTML</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+      <a href="pdfs/css-course.pdf" target="_blank">CSS</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Ruby">
+      <a href="pdfs/ruby-course.pdf" target="_blank">Ruby</a>
+    </div>
+    <div class="language-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Kotlin">
+      <a href="pdfs/kotlin-course.pdf" target="_blank">Kotlin</a>
+    </div>
+  </div>
+
+</body>
+</html>

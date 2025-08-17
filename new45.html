@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Result</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e8f0fe;
+      padding: 40px;
+      color: #333;
+    }
+    .result-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="result-container" id="resultBox">
+    <h2>Loading your results...</h2>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get('topic');
+
+    const content = {
+      "python": `
+        <h2>Python Development</h2>
+        <ul>
+          <li>Start with beginner projects like calculators or to-do apps.</li>
+          <li>Learn data science with pandas and matplotlib.</li>
+          <li>Use Flask or Django to build web applications.</li>
+        </ul>
+      `,
+      "javascript": `
+        <h2>JavaScript Projects</h2>
+        <ul>
+          <li>Create interactive websites with DOM manipulation.</li>
+          <li>Use APIs to build a weather or news app.</li>
+          <li>Explore front-end frameworks like React or Vue.</li>
+        </ul>
+      `,
+      "cybersecurity": `
+        <h2>Cybersecurity Basics</h2>
+        <ul>
+          <li>Understand firewalls, phishing, and malware types.</li>
+          <li>Practice ethical hacking in TryHackMe or HackTheBox.</li>
+          <li>Explore penetration testing and cryptography.</li>
+        </ul>
+      `,
+      "computer networks": `
+        <h2>Computer Networks</h2>
+        <ul>
+          <li>Understand the OSI and TCP/IP models.</li>
+          <li>Learn how routing and switching works.</li>
+          <li>Use Wireshark or Packet Tracer to simulate traffic.</li>
+        </ul>
+      `,
+      "software development": `
+        <h2>Software Development Lifecycle</h2>
+        <ul>
+          <li>Phases: Planning, Design, Development, Testing, Deployment.</li>
+          <li>Use Agile or Scrum methodologies.</li>
+          <li>Build real-world CRUD apps using GitHub and version control.</li>
+        </ul>
+      `,
+      "information science": `
+        <h2>Information Science</h2>
+        <ul>
+          <li>Study data organization, metadata, and indexing.</li>
+          <li>Explore search engines, digital libraries, and databases.</li>
+          <li>Work with XML, SQL, and information architecture.</li>
+        </ul>
+      `
+    };
+
+    const resultBox = document.getElementById("resultBox");
+
+    if (content[topic]) {
+      resultBox.innerHTML = content[topic];
+    } else {
+      resultBox.innerHTML = `
+        <h2>No results found for "${topic}"</h2>
+        <p>Please try topics like: Python, Cybersecurity, JavaScript, Computer Networks, Software Development, Information Science.</p>
+        <a href="index.html" style="color: #0d47a1; text-decoration: underline;">← Go back</a>
+      `;
+    }
+  </script>
+
+</body>
+</html>

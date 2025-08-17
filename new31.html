@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PescoiFrank Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004060, #0077cc);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .topic-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .topic-card h2 {
+      margin: 15px 0 10px;
+      color: #004060;
+    }
+
+    .topic-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .icon {
+      font-size: 40px;
+      color: #0077cc;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 20px;
+    }
+
+    .cta h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .cta button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #004060;
+      color: white;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PescoiFrank Community</h1>
+  <p>Join a growing community of learners, developers, and tech professionals sharing knowledge across programming, cybersecurity, networks, and beyond.</p>
+</header>
+
+<section class="community-grid">
+
+  <div class="topic-card">
+    <div class="icon">💻</div>
+    <h2>Programming</h2>
+    <p>Share your code, ask questions, or collaborate on real-world projects in Python, JavaScript, C, and more.</p>
+  </div>
+
+  <div class="topic-card">
+    <div class="icon">🔐</div>
+    <h2>Cybersecurity</h2>
+    <p>Get tips on ethical hacking, securing systems, and protecting data from threats and vulnerabilities.</p>
+  </div>
+
+  <div class="topic-card">
+    <div class="icon">🌐</div>
+    <h2>Computer Networks</h2>
+    <p>Discuss routing, network security, LAN/WAN configurations, and network troubleshooting.</p>
+  </div>
+
+  <div class="topic-card">
+    <div class="icon">🧠</div>
+    <h2>Software Development</h2>
+    <p>Explore agile methodologies, SDLC, app development, version control, and dev tools.</p>
+  </div>
+
+  <div class="topic-card">
+    <div class="icon">📚</div>
+    <h2>Information Science</h2>
+    <p>Talk about data systems, digital libraries, research tools, knowledge bases, and indexing systems.</p>
+  </div>
+
+</section>
+
+<section class="cta">
+  <h3>Ready to Connect & Contribute?</h3>
+  <button onclick="alert('Redirecting to registration page...')">Join the Community</button>
+</section>
+
+<footer>
+  &copy; 2025 PescoiFrank. Together we grow.
+</footer>
+
+</body>
+</html>

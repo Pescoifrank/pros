@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0056b3;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    h1, h2 {
+      color: #0056b3;
+    }
+    .account-section {
+      background: #eef4ff;
+      border-left: 5px solid #0056b3;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn {
+      background: #0056b3;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn:hover {
+      background: #003d80;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      background: #333;
+      color: #fff;
+    }
+    .message {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Account</h1>
+  </header>
+
+  <div class="container">
+    <div class="account-section">
+      <h2>Profile Information</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" value="PescoiFrank">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" value="pescoifrank@gmail.com">
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" value="+254 114492576">
+
+      <button class="btn" onclick="updateProfile()">Update Profile</button>
+      <div id="profileMsg" class="message"></div>
+    </div>
+
+    <div class="account-section">
+      <h2>Security Settings</h2>
+      <label for="password">Change Password:</label>
+      <input type="password" id="password" placeholder="Enter new password">
+
+      <label for="twoFactor">Two-Factor Authentication:</label>
+      <select id="twoFactor">
+        <option>Disabled</option>
+        <option>Enabled</option>
+      </select>
+
+      <button class="btn" onclick="saveSecurity()">Save Security Settings</button>
+      <div id="securityMsg" class="message"></div>
+    </div>
+
+    <div class="account-section">
+      <h2>Linked Accounts</h2>
+      <p>Manage your claimed external accounts:</p>
+      <button class="btn" onclick="viewClaimedAccounts()">View Claimed Accounts</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Your Company Name. All rights reserved.
+  </footer>
+
+  <script>
+    function updateProfile() {
+      let username = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+
+      localStorage.setItem("username", username);
+      localStorage.setItem("email", email);
+      localStorage.setItem("phone", phone);
+
+      document.getElementById("profileMsg").innerText = "Profile updated successfully!";
+    }
+
+    function saveSecurity() {
+      let password = document.getElementById("password").value;
+      let twoFactor = document.getElementById("twoFactor").value;
+
+      if (password.trim() === "") {
+        alert("Please enter a new password.");
+        return;
+      }
+
+      localStorage.setItem("password", password);
+      localStorage.setItem("twoFactor", twoFactor);
+
+      document.getElementById("securityMsg").innerText = "Security settings saved!";
+    }
+
+    function viewClaimedAccounts() {
+      window.location.href = "claimed-external-account.html"; // Replace with your actual file/page
+    }
+
+    // Load saved data if available
+    window.onload = function() {
+      if(localStorage.getItem("username")) {
+        document.getElementById("username").value = localStorage.getItem("username");
+      }
+      if(localStorage.getItem("email")) {
+        document.getElementById("email").value = localStorage.getItem("email");
+      }
+      if(localStorage.getItem("phone")) {
+        document.getElementById("phone").value = localStorage.getItem("phone");
+      }
+      if(localStorage.getItem("twoFactor")) {
+        document.getElementById("twoFactor").value = localStorage.getItem("twoFactor");
+      }
+    }
+  </script>
+</body>
+</html>

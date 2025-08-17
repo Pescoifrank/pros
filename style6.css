@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section h1,
+.pescoi-section h2,
+.other-help h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.vertical-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 60%;
+  background-color: #f9f9f9;
+}
+
+.other-help {
+  box-shadow: 0 0 0 transparent;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.help-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  padding: 10px 20px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+
+.pescoi-section {
+  margin: 30px;
+  text-align: center;
+}
+
+select {
+  margin: 15px;
+  padding: 5px;
+}
+
+.horizontal-menus {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.horizontal-menus div {
+  width: 30%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PescoiFrank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      line-height: 1.6;
+      padding-top: 80px;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: white;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+    header span {
+      color: #0073ff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #141d28;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #0073ff;
+    }
+    .btn-red {
+      background-color: red;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .btn-red:hover {
+      background-color: darkred;
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 5%;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      width: 40%;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+    .section img:hover {
+      transform: scale(1.03);
+    }
+    .section-content {
+      width: 55%;
+    }
+    .section-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .section-content p {
+      margin-bottom: 20px;
+    }
+    .section-content input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .footer {
+      background: #141d28;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .small-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .small-images img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .small-images img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 20px;
+      }
+      nav ul {
+        gap: 15px;
+        font-size: 14px;
+      }
+      .section {
+        flex-direction: column;
+        padding: 40px 5%;
+      }
+      .section.reverse {
+        flex-direction: column;
+      }
+      .section img,
+      .section-content {
+        width: 100%;
+      }
+      .small-images {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <h1>Pescoi<span>Frank</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#login" class="btn-red">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section 1: Search for an Idea -->
+  <section class="section">
+    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Idea Image">
+    <div class="section-content">
+      <h2>Search for an Idea</h2>
+      <p>Tech questions or thoughts you want to explore?</p>
+      <input type="text" placeholder="Search your idea here...">
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+  </section>
+
+  <!-- Section 2: Save Ideas -->
+  <section class="section reverse">
+    <div class="section-content">
+      <h2>Save Ideas You Like</h2>
+      <p>Collect your favorite ideas and inspirations to revisit and use later.</p>
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+    <div class="small-images">
+      <img src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww" alt="">
+      <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww" alt="">
+      <img src="https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww" alt="">
+    </div>
+  </section>
+
+  <!-- Section 3: See It, Make It -->
+  <section class="section">
+    <img src="https://images.unsplash.com/photo-1544207763-2872e5eb9b78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Make It">
+    <div class="section-content">
+      <h2>See it, Make it, Let's Do it</h2>
+      <p>It’s easier than ever to build something amazing from your ideas.</p>
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 PescoiFrank2025. All rights reserved. | Terms | Privacy | Support</p>
+  </footer>
+
+  <script src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D"></script>
+</body>
+</html>

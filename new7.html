@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Companion</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background: url('https://media.istockphoto.com/id/1339496659/photo/cloud-computing.webp?a=1&b=1&s=612x612&w=0&k=20&c=b8rBBdi6ebwyr3BzyofjHJ0B56toqRIGEOG6HcvWsoE=') no-repeat center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .feature-box {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #0288d1;
+      margin-bottom: 10px;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    iframe {
+      width: 80%;
+      height: 400px;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #0288d1;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      iframe {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cloud Companion</h1>
+    <p>Your smart assistant in the cloud, accessible anytime, anywhere.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature-box">
+      <i class="fas fa-cloud"></i>
+      <h3>Auto Sync</h3>
+      <p>Keep your data updated across all devices instantly.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-lock"></i>
+      <h3>Secure Access</h3>
+      <p>Advanced encryption ensures your privacy and safety.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast Backup</h3>
+      <p>Schedule fast and automatic backups in seconds.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-users-cog"></i>
+      <h3>Team Collaboration</h3>
+      <p>Work with your team in real-time, from anywhere.</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>How It Works</h2>
+    <iframe src="https://www.youtube.com/embed/A74TOX803D0" frameborder="0" allowfullscreen></iframe>
+    <br>
+  
+  </section>
+
+  <footer>
+    &copy; 2025 Cloud Companion. All rights reserved.
+  </footer>
+
+</body>
+</html>

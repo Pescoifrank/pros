@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0066cc;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #0066cc;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .menu-item {
+      flex: 1 1 200px;
+      background: #eef6ff;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid #cce0ff;
+      transition: 0.3s;
+    }
+    .menu-item:hover {
+      background: #cce0ff;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Account</h1>
+    <p>Manage your account, security, and linked services</p>
+  </header>
+
+  <div class="container">
+    <h2>Account Dashboard</h2>
+    <div class="menu">
+      <a href="your-account.html">
+        <div class="menu-item">
+          <h3>Your Account</h3>
+          <p>View and update your personal details.</p>
+        </div>
+      </a>
+      <a href="security.html">
+        <div class="menu-item">
+          <h3>Security</h3>
+          <p>Change password, set up 2FA.</p>
+        </div>
+      </a>
+      <a href="claimed-external-account.html">
+        <div class="menu-item">
+          <h3>Claimed External Accounts</h3>
+          <p>Manage your linked accounts.</p>
+        </div>
+      </a>
+      <a href="reports.html">
+        <div class="menu-item">
+          <h3>Reports & Violations</h3>
+          <p>View and manage your report history.</p>
+        </div>
+      </a>
+      <a href="settings.html">
+        <div class="menu-item">
+          <h3>Settings</h3>
+          <p>Adjust preferences and notifications.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Your Company Name. All rights reserved.
+  </footer>
+</body>
+</html>

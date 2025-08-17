@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PescoiFrank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      line-height: 1.6;
+      padding-top: 80px;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: white;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+    header span {
+      color: #0073ff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #141d28;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #0073ff;
+    }
+    .btn-red {
+      background-color: red;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .btn-red:hover {
+      background-color: darkred;
+    }
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .swiper-slide::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      max-width: 700px;
+    }
+    .slide-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .slide-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 5%;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      width: 40%;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+    .section img:hover {
+      transform: scale(1.03);
+    }
+    .section-content {
+      width: 55%;
+    }
+    .section-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .section-content p {
+      margin-bottom: 20px;
+    }
+    .section-content input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .footer {
+      background: #141d28;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .small-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .small-images img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .small-images img:hover {
+      transform: scale(1.1);
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 20px;
+      }
+      nav ul {
+        gap: 15px;
+        font-size: 14px;
+      }
+      .section {
+        flex-direction: column;
+        padding: 40px 5%;
+      }
+      .section.reverse {
+        flex-direction: column;
+      }
+      .section img,
+      .section-content {
+        width: 100%;
+      }
+      .small-images {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <h1>Pescoi<span>Frank</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#login" class="btn-red">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Swiper Slider -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('https://source.unsplash.com/1600x900/?programming')">
+        <div class="slide-content">
+          <h2>Programming & Software Development</h2>
+          <p>Design, build, and maintain powerful software applications.</p>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://source.unsplash.com/1600x900/?networking')">
+        <div class="slide-content">
+          <h2>Computer Networks & Communication</h2>
+          <p>Explore how devices connect and exchange data securely.</p>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://source.unsplash.com/1600x900/?cybersecurity')">
+        <div class="slide-content">
+          <h2>Cybersecurity & Info Science</h2>
+          <p>Secure your data and systems from threats and breaches.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1: Search for an Idea -->
+  <section class="section">
+    <img src="https://source.unsplash.com/600x400/?technology,idea" alt="Idea Image">
+    <div class="section-content">
+      <h2>Search for an Idea</h2>
+      <p>Tech questions or thoughts you want to explore?</p>
+      <input type="text" placeholder="Search your idea here...">
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+  </section>
+
+  <!-- Section 2: Save Ideas -->
+  <section class="section reverse">
+    <div class="section-content">
+      <h2>Save Ideas You Like</h2>
+      <p>Collect your favorite ideas and inspirations to revisit and use later.</p>
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+    <div class="small-images">
+      <img src="https://source.unsplash.com/100x100/?coding" alt="">
+     
+    </div>
+  </section>
+
+  <!-- Section 3: See It, Make It -->
+  <section class="section">
+    <img src="https://source.unsplash.com/600x400/?inspiration,technology" alt="Make It">
+    <div class="section-content">
+      <h2>See it, Make it, Let's Do it</h2>
+      <p>It’s easier than ever to build something amazing from your ideas.</p>
+      <a href="#" class="btn-red">Explore</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 PescoiFrank2025. All rights reserved. | Terms | Privacy | Support</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      effect: 'slide',
+      speed: 1000,
+    });
+  </script>
+</body>
+</html>

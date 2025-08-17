@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Your Tech Idea</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #0d47a1;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: red;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .result-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #e3f2fd;
+      border-left: 6px solid #1976d2;
+      border-radius: 10px;
+    }
+
+    .result-box h3 {
+      margin-top: 0;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 style="color: red;">Search for an Idea</h1>
+    <p>Tech questions or thoughts you want to explore?</p>
+    <input type="text" id="techInput" placeholder="Search your idea here...">
+    <button onclick="exploreIdea()">Explore</button>
+
+    <div id="resultBox" class="result-box" style="display: none;"></div>
+  </div>
+
+  <script>
+    const ideas = {
+      "python": `
+        <h3>Python Development</h3>
+        <ul>
+          <li>Build a calculator or to-do app.</li>
+          <li>Learn about data analysis with pandas and matplotlib.</li>
+          <li>Try Flask or Django for web development.</li>
+          <li>Explore machine learning with scikit-learn.</li>
+        </ul>
+      `,
+      "javascript": `
+        <h3>JavaScript Projects</h3>
+        <ul>
+          <li>Make a dynamic website with DOM manipulation.</li>
+          <li>Build a weather app using APIs.</li>
+          <li>Try animations with GSAP or Framer Motion.</li>
+          <li>Create a real-time chat app with Firebase.</li>
+        </ul>
+      `,
+      "cybersecurity": `
+        <h3>Cybersecurity Ideas</h3>
+        <ul>
+          <li>Understand common threats: phishing, ransomware, DDoS.</li>
+          <li>Set up a virtual lab using Kali Linux.</li>
+          <li>Try ethical hacking with TryHackMe or Hack The Box.</li>
+          <li>Learn about firewalls, encryption, and secure coding.</li>
+        </ul>
+      `,
+      "computer networks": `
+        <h3>Computer Networks</h3>
+        <ul>
+          <li>Learn the OSI model (7 layers).</li>
+          <li>Understand TCP/IP, DNS, and packet transmission.</li>
+          <li>Simulate a network using Cisco Packet Tracer.</li>
+          <li>Explore routing, switching, and firewalls.</li>
+        </ul>
+      `,
+      "information science": `
+        <h3>Information Science</h3>
+        <ul>
+          <li>Study how data is structured, stored, and retrieved.</li>
+          <li>Explore digital libraries, databases, and metadata.</li>
+          <li>Build a cataloging system using SQL and PHP.</li>
+          <li>Understand knowledge management and search algorithms.</li>
+        </ul>
+      `,
+      "software development": `
+        <h3>Software Development</h3>
+        <ul>
+          <li>Learn the Software Development Life Cycle (SDLC).</li>
+          <li>Try Agile and Scrum project methods.</li>
+          <li>Create a CRUD app with a backend language.</li>
+          <li>Use GitHub for version control and collaboration.</li>
+        </ul>
+      `
+    };
+
+    function exploreIdea() {
+      const input = document.getElementById("techInput").value.toLowerCase();
+      const resultBox = document.getElementById("resultBox");
+
+      let found = false;
+      for (let keyword in ideas) {
+        if (input.includes(keyword)) {
+          resultBox.innerHTML = ideas[keyword];
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        resultBox.innerHTML = `<h3>No exact match found</h3><p>Try keywords like <strong>Python</strong>, <strong>Cybersecurity</strong>, <strong>JavaScript</strong>, <strong>Software Development</strong>, etc.</p>`;
+      }
+
+      resultBox.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

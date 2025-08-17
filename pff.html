@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Science Platform</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+    }
+
+    .hero {
+      background: url('https://media.istockphoto.com/id/2185554852/photo/blue-glowing-modern-keyboard-with-blurred-bokeh-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=3BvrYmY0EOqeprOQSEEtmgsbPavjgYypCVDZHFHv2FY=') center/cover no-repeat;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      min-height: 250px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .intro-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .intro-images img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+      gap: 15px;
+      white-space: nowrap;
+    }
+
+    .slider::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+      background: #0073ff;
+      border-radius: 3px;
+    }
+
+    .category {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background: #0073ff;
+      color: white;
+    }
+
+    .content-section {
+      display: none;
+      animation: fadeIn 1s ease;
+      background: #fff;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 15px;
+      background: yellow;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Information Science Platform</h1>
+    <p>Explore the diverse domains of Information Science including Retrieval, Architecture, HCI, Knowledge Management, and more.</p>
+  </div>
+
+  <div class="intro-images">
+    <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="Information Science 1">
+    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" alt="Information Science 2">
+    <img src="https://media.istockphoto.com/id/2207541623/photo/person-interacting-with-digital-tablet-in-professional-office-setting.webp?a=1&b=1&s=612x612&w=0&k=20&c=vm_mzaO42pwOz5GUqyU7XW-L9taLs20xCHi6Gy3mhPY=" alt="Information Science 3">
+  </div>
+
+  <div class="slider">
+    <div class="category" onclick="showContent('retrieval')">Information Retrieval</div>
+    <div class="category" onclick="showContent('organization')">Information Organization</div>
+    <div class="category" onclick="showContent('storage')">Storage & Management</div>
+    <div class="category" onclick="showContent('architecture')">Information Architecture</div>
+    <div class="category" onclick="showContent('knowledge')">Knowledge Management</div>
+    <div class="category" onclick="showContent('library')">Library & Archival Science</div>
+    <div class="category" onclick="showContent('hci')">Human-Computer Interaction</div>
+    <div class="category" onclick="showContent('analytics')">Data Science & Analytics</div>
+    <div class="category" onclick="showContent('policy')">Policy & Ethics</div>
+    <div class="category" onclick="showContent('cyber')">Cybersecurity Assurance</div>
+    <div class="category" onclick="showContent('media')">Digital Communication</div>
+    <div class="category" onclick="showContent('health')">Health Informatics</div>
+    <div class="category" onclick="showContent('ai')">AI in Information Systems</div>
+  </div>
+
+  <div id="retrieval" class="content-section">
+    <h2>Information Retrieval</h2>
+    <p>Search engines, query languages, relevance algorithms.</p>
+    <iframe src="https://www.youtube.com/embed/noMQjrACHxQ?si=1XOInbubKvvtwxCU"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="organization" class="content-section">
+    <h2>Information Organization</h2>
+    <p>Metadata, cataloging, classification systems, taxonomies.</p>
+    <iframe src="https://www.youtube.com/embed/Q81jafWjpCM?si=Ex0qB6N4M6vGwmIL"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="storage" class="content-section">
+    <h2>Information Storage and Management</h2>
+    <p>Databases, data warehouses, digital libraries.</p>
+    <iframe src="https://www.youtube.com/embed/WGCvoR4vbEo?si=w0x2djKVzfDKZ6y3"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="architecture" class="content-section">
+    <h2>Information Architecture</h2>
+    <p>Structuring websites, applications, or intranets for usability.</p>
+    <iframe src="https://www.youtube.com/embed/OJLfjgVlwDo?si=YGR80Q40LnHuT0iP"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="knowledge" class="content-section">
+    <h2>Knowledge Management</h2>
+    <p>Capturing, distributing, and effectively using knowledge in organizations.</p>
+    <iframe src="https://www.youtube.com/embed/3_eI5r55XhU?si=jVClQ_PyhHoLbV-f"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="library" class="content-section">
+    <h2>Library and Archival Science</h2>
+    <p>Preservation, curation, and organization of physical/digital media.</p>
+    <iframe src="https://www.youtube.com/embed/85cV6DfPrEA?si=AkXbxHQ32qCDc7XE"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="hci" class="content-section">
+    <h2>Human-Computer Interaction (HCI)</h2>
+    <p>UI/UX design, usability testing, interaction models.</p>
+    <iframe src="https://www.youtube.com/embed/S6_VuAk8taA?si=PKzQNkqvuRNxQox0"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="analytics" class="content-section">
+    <h2>Data Science & Analytics</h2>
+    <p>Data mining, statistical analysis, machine learning, visualization.</p>
+    <iframe src="https://www.youtube.com/embed/OivTPt5LQh0?si=_1xSLGPpodzc1cAD"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+     <iframe src="https://www.youtube.com/embed/PSNXoAs2FtQ?si=xlrA99B0AJs5sme3"   allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="policy" class="content-section">
+    <h2>Information Policy & Ethics</h2>
+    <p>Privacy, copyright, access rights, digital divide, and data governance.</p>
+    <iframe src="https://www.youtube.com/embed/FDwh_JWoBAU?si=sB8qRvAHfa4QL-rp"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="cyber" class="content-section">
+    <h2>Cybersecurity and Information Assurance</h2>
+    <p>Protecting data and systems from threats.</p>
+    <iframe src="https://www.youtube.com/embed/-n7iaQVF88A?si=-yTni0ipdq15ey9G"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="media" class="content-section">
+    <h2>Digital Communication and Media</h2>
+    <p>Online journalism, digital storytelling, content creation.</p>
+    <iframe src="https://www.youtube.com/embed/QY6K1G_UypM?si=XHRCBttn4nTxIxad" allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="health" class="content-section">
+    <h2>Health Informatics</h2>
+    <p>Application of information science in healthcare.</p>
+    <iframe src="https://www.youtube.com/embed/MB_yyDerwGs?si=_8ioSFhovMPvFGVn"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <div id="ai" class="content-section">
+    <h2>Artificial Intelligence in Information Systems</h2>
+    <p>Intelligent retrieval systems, chatbots, and recommender systems.</p>
+    <iframe src="https://www.youtube.com/embed/JMUxmLyrhSk?si=ZlwzOHMc9kXrgbyf"  allowfullscreen></iframe>
+    <a href="#" class="pdf-link">Download PDF Notes</a>
+  </div>
+
+  <footer>
+    &copy; pescoifrank@2025
+  </footer>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

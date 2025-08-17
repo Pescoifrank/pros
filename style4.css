@@ -1,0 +1,203 @@
+:root {
+    --color-primary: #0073ff;
+    --color-black: #141d28;
+    --color-white: #e9e9e9;
+    --color-black-1: #212b38;
+}
+ .{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items:upper center;
+    height: 50vh;
+    width: 100vw;
+    background: url('https://media.istockphoto.com/id/2211844299/photo/freelancer-woman-is-working-on-a-laptop-outdoors-in-summer.webp?a=1&b=1&s=612x612&w=0&k=20&c=7Hw1jzpB5igFIeMhb3fgCQQI9Ns7eWp2Co3L9vn4feU=');'
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(60px);
+}
+.menu_bar {
+    background-color: var(--color-white);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+}
+.logo {
+    color: var(--color-black);
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+
+}
+.logo span {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 5px;
+    font-family: 'Arial', sans-serif;
+
+}
+.menu_bar ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+.menu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+
+
+}
+.menu_bar ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('https://plus.unsplash.com/premium_photo-1667635308091-93e4acdcbcc7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3JlYW0lMjBjYXJkfGVufDB8fDB8fHww');
+.card {
+    width: 325px;
+    background-color: #f0f0f0
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+
+}
+.card content {
+    padding: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 0 0 8px 8px;
+
+}
+.card-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 18px;
+}
+.card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 18px;
+}
+.card-content a {
+    display: inline-block;
+    padding-left: 18px;
+    border-radius: none;
+    transition: background-color 0.3s ease;
+}
+
+}
+section-2 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 70vh;
+    width: 100vw;
+    background: url('https://media.istockphoto.com/id/2167187210/photo/futuristic-digital-interface-with-floating-code-screens-on-dark-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=lBTIegTQaXE0fFP0jAM227-j3T-bf2YXOortvJOWNLY=');'
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(60px);   
+}
+.wrapper {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.image-box {
+    width: 300px;
+    position: relative;
+    overflow:hidden;
+    height: 200px;
+    border-radius: 10px;
+    margin: 15px;
+    carsor: pointer;
+
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.image-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+.image-box .overlay-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+    
+}
+.image-box:hover img {
+    transform: scale(1.1);
+}
+.image-box:hover .overlay {
+    opacity: 1;
+}
+    
+

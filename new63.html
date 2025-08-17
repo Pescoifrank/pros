@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows Account Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, sans-serif;
+      background-color: #f3f3f3;
+    }
+    .header {
+      background-color: #0078d4;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #0078d4;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .sidebar ul li:hover {
+      background-color: #f0f0f0;
+    }
+    .main {
+      flex: 1;
+      margin-left: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+    .profile img {
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      margin-right: 20px;
+    }
+    .profile h2 {
+      margin: 0;
+    }
+    .btn {
+      background-color: #0078d4;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #005a9e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows Logo">
+    Windows Account Settings
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Settings</h3>
+      <ul>
+        <li>Account Info</li>
+        <li>Sign-in Options</li>
+        <li>Email & App Accounts</li>
+        <li>Family & Other Users</li>
+        <li>Sync Settings</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="profile">
+        <img src="https://media.istockphoto.com/id/1420495828/photo/african-american-man-in-vr-headset-exploring-metaverse-world-touching-virtual-reality-subjects.webp?a=1&b=1&s=612x612&w=0&k=20&c=pe-UQWQkICpJmbfcg-cCexHECzk44zRGd2d-mQcmnmU=" alt="User Avatar">
+        <div>
+          <h2>Pescoi Frank</h2>
+          <p>Email: pescoifrankline@example.com</p>
+          <button class="btn">Manage Account</button>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 30px;">Account Overview</h3>
+      <p>This page allows you to manage your Windows account details, security settings, and sync preferences.</p>
+
+      <h3>Recent Activity</h3>
+      <ul>
+        <li>Signed in from Edge browser</li>
+        <li>Password updated 3 days ago</li>
+        <li>Two-step verification enabled</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

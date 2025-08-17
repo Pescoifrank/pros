@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e9ecef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 87%;
+      padding: 10px 35px 10px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .input-group i {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register-btn:hover {
+      background-color: #218838;
+    }
+
+    .social-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    .google { background-color: #db4437; }
+    .facebook { background-color: #4267B2; }
+    .twitter { background-color: #1DA1F2; }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <div id="error-msg" class="error">Invalid registration details!</div>
+    <form id="registerForm">
+      <div class="input-group">
+        <input type="text" id="regUsername" placeholder="User Name" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="input-group">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <i class="fas fa-lock"></i>
+      </div>
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+
+    <div class="social-btns">
+      <a href="next.html" class="social-btn google"><i class="fab fa-google"></i> Register with Google</a>
+      <a href="next.html" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Register with Facebook</a>
+      <a href="next.html" class="social-btn twitter"><i class="fab fa-twitter"></i> Register with Twitter</a>
+    </div>
+
+    <div class="login-link">
+      Already have an account? <a href="yess.html">Login here</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("regUsername").value.trim();
+      const email = document.getElementById("regEmail").value.trim();
+      const password = document.getElementById("regPassword").value.trim();
+      const errorMsg = document.getElementById("error-msg");
+
+      const correctUsername = "Pescoifrank";
+      const correctEmail = "pescoifrankline@gmail.com";
+      const correctPassword = "Pescoi12345";
+
+      if (
+        username === correctUsername &&
+        email === correctEmail &&
+        password === correctPassword
+      ) {
+        window.location.href = "6th.html"; // Redirect on success
+      } else {
+        errorMsg.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

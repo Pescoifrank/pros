@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developer's Choice</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #f5f7fa, #dce1e6);
+      color: #222;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D') no-repeat center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box i {
+      font-size: 2.2rem;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    iframe {
+      width: 150%;
+      height: 400px;
+      max-width: 720px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .pdf-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      iframe {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Developer's Choice</h1>
+    <p>Built for developers who want full control, speed, and integration.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature-box">
+      <i class="fas fa-code"></i>
+      <h3>Live Code Editor</h3>
+      <p>Run, test, and preview code in real-time across multiple languages.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fab fa-github"></i>
+      <h3>GitHub Integration</h3>
+      <p>Sync your repositories, track commits, and deploy directly.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-sync-alt"></i>
+      <h3>CI/CD Pipelines</h3>
+      <p>Automate your build and deployment flows seamlessly.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-cogs"></i>
+      <h3>Custom Dev Environments</h3>
+      <p>Spin up sandboxed dev spaces with preloaded tools and SDKs.</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Quick Demo</h2>
+    <iframe src="https://www.youtube.com/embed/A74TOX803D0" frameborder="0" allowfullscreen></iframe>
+    <br>
+   
+  </section>
+
+  <footer>
+    &copy; 2025 Developer's Choice Platform. Engineered for innovation.
+  </footer>
+
+</body>
+</html>

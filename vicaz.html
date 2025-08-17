@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Development Categories</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .image-boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 20px;
+      background: #ffffff;
+    }
+
+    .image-box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .image-box h3 {
+      padding: 15px;
+      font-size: 1.1em;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .search-box {
+      width: 90%;
+      max-width: 700px;
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #0073ff;
+      border: none;
+      color: white;
+      padding: 0 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .category-slider {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+      scroll-behavior: smooth;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .category-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .category-slider::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    .category-item {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      font-weight: 500;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background-color: #0073ff;
+      color: white;
+    }
+
+    .content-section {
+       display: none;
+      animation: fadeIn 1s ease;
+      background: #fff;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .content-section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .content-section iframe {
+       
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .content-section a.pdf-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: yellow;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .image-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Software Development Hub</h1>
+    <p>Explore various software categories, tutorials, and notes to boost your knowledge.</p>
+  </header>
+
+  <div class="image-boxes">
+    <div class="image-box">
+      <img src="https://images.unsplash.com/file-1719664968387-83d5a3f4d758image?w=416&dpr=2&auto=format&fit=crop&q=60" alt="Web Design">
+      <h3>Responsive Web Design</h3>
+    </div>
+    <div class="image-box">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Code">
+      <h3>Interactive Code Snippets</h3>
+    </div>
+    <div class="image-box">
+      <img src="https://plus.unsplash.com/premium_photo-1723672940275-a56d86dffcb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3NzJTIwYW5pbWF0aW9uJTIwYW5kJTIwdHJhbnNpc3RvcnMlMjBjb21wdXRlciUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="Animation">
+      <h3>CSS Animations & Transitions</h3>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <form class="search-box" action="#">
+      <input type="text" placeholder="Search software development..." />
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+
+  <div class="category-slider" id="category-slider">
+    <!-- categories populated here -->
+  </div>
+
+  <div id="category-content">
+    <!-- dynamic category content inserted here -->
+  </div>
+
+  <footer>
+    <p>© 2025 PescoiFrank. All rights reserved | Privacy Policy | Terms</p>
+  </footer>
+
+  <script>
+    const categories = [
+      { name: 'Network Architecture & Design', video: "https://www.youtube.com/embed/fErDcUtd8fA?si=_otuICo_hXVg2lm0", pdf: 'https://example.com/system-software.pdf' },
+      { name: 'Network Administration', video: "https://www.youtube.com/embed/bv8kULPtiY8?si=6ZYhl1RB3QHoQ6re" , pdf: 'https://example.com/application-software.pdf' },
+      { name: 'Wireless & Mobile Networking', video: "https://www.youtube.com/embed/H7tGiGjL9bA?si=myooz7bHFx1PaOeM" , pdf: 'https://example.com/embedded-software.pdf' },
+      { name: 'Internet of Things (IoT) Networking', video:"https://www.youtube.com/embed/h0gWfVCSGQQ?si=He6Vjz2w_GWnqNxQ" , pdf: 'https://example.com/full-stack.pdf' },
+      { name: 'Network Security', video:"https://www.youtube.com/embed/zIWGjkr0ENE?si=-__6xi-iJ1nUy675" , pdf: 'https://example.com/mobile-apps.pdf' },
+      { name: 'Cloud Netowking', video: "https://www.youtube.com/embed/L5Qqobx2vFI?si=yRT44m0SsbHkjpa5" , pdf: 'https://example.com/web-development.pdf' },
+      { name: 'Data Communication Protocals', video:"https://www.youtube.com/embed/ly8ikWtAY7s?si=qkprWxcgb2KbgAGa" , pdf: 'https://example.com/desktop-apps.pdf' },
+      { name: 'Telecommunication Systems', video: "https://www.youtube.com/embed/HAJ335_arVo?si=QMoxS0_EdQ1jmh8x" , pdf: 'https://example.com/game-development.pdf' },
+      { name: 'VoIP & Multimedia Communication', video: "https://www.youtube.com/embed/YWv608W7O1Y?si=hfHF6cAx-lV1HCMj" , pdf: 'https://example.com/ai-ml.pdf' },
+     
+    
+    ];
+
+    const slider = document.getElementById("category-slider");
+    const contentArea = document.getElementById("category-content");
+
+    categories.forEach(category => {
+      const btn = document.createElement("a");
+      btn.className = "category-item";
+      btn.textContent = category.name;
+      btn.href = "#";
+      btn.onclick = () => {
+        contentArea.innerHTML = `
+          <div class="content-section active">
+            <h2>Welcome to ${category.name}</h2>
+            <p>Explore the key concepts and tutorials for ${category.name.toLowerCase()} below.</p>
+            <iframe src="${category.video}" frameborder="0" allowfullscreen></iframe>
+            <br>
+            <a class="pdf-link" href="${category.pdf}" target="_blank">Download PDF Notes</a>
+          </div>
+        `;
+        return false;
+      };
+      slider.appendChild(btn);
+    });
+  </script>
+</body>
+</html>

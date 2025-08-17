@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .search-bar {
+      margin-top: 20px;
+    }
+
+    .search-bar input {
+      padding: 12px 20px;
+      width: 60%;
+      max-width: 500px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .topic-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .topic-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      border-left: 5px solid #4ca1af;
+    }
+
+    .faq {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-header {
+      padding: 15px 20px;
+      cursor: pointer;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .faq-body {
+      padding: 0 20px 15px 20px;
+      display: none;
+      font-size: 0.95rem;
+      background: #fafafa;
+    }
+
+    .faq.open .faq-body {
+      display: block;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .search-bar input {
+        width: 90%;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Help Center</h1>
+    <p>Find answers across technology disciplines</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for help..." onkeyup="searchFAQs(this.value)">
+    </div>
+  </header>
+
+  <!-- Programming -->
+  <section class="topic-section" id="programming">
+    <h2>💻 Programming</h2>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What is object-oriented programming (OOP)?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        OOP is a paradigm based on the concept of objects that contain data and methods. It promotes reusability through inheritance and encapsulation.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What’s the difference between Java and Python?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        Java is statically typed and faster, ideal for large-scale apps. Python is dynamically typed and great for quick development and data science.
+      </div>
+    </div>
+  </section>
+
+  <!-- Cybersecurity -->
+  <section class="topic-section" id="cybersecurity">
+    <h2>🔐 Cybersecurity</h2>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What are the most common cyber threats?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        Common threats include phishing, malware, ransomware, DDoS attacks, and insider threats.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        How can I secure my personal data online?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        Use strong passwords, enable 2FA, avoid clicking unknown links, and regularly update software.
+      </div>
+    </div>
+  </section>
+
+  <!-- Computer Networks & Security -->
+  <section class="topic-section" id="networks">
+    <h2>🌐 Computer Networks & Security</h2>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What’s the difference between TCP and UDP?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        TCP is connection-based and ensures data delivery, while UDP is faster but does not guarantee delivery.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What is a VPN and how does it work?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        A VPN encrypts your internet traffic and routes it through a secure server, hiding your IP and protecting data.
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Development -->
+  <section class="topic-section" id="software-dev">
+    <h2>🛠️ Software Development</h2>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What is the Software Development Life Cycle (SDLC)?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        SDLC is a structured process for creating software, including stages like planning, analysis, design, implementation, testing, and maintenance.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What are Agile and Scrum?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        Agile is a methodology promoting iterative development. Scrum is an Agile framework using sprints, daily stand-ups, and cross-functional teams.
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Science -->
+  <section class="topic-section" id="infosci">
+    <h2>📚 Information Science</h2>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What is Information Science?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        Information Science is the study of how information is collected, stored, retrieved, and used, including systems and technologies involved.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        What’s the role of a data librarian?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-body">
+        A data librarian manages digital and physical data collections, ensures accessibility, and helps users retrieve relevant information efficiently.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Help Center | Built for learners, by developers.
+  </footer>
+
+  <script>
+    function toggleFAQ(header) {
+      const faq = header.parentElement;
+      faq.classList.toggle("open");
+    }
+
+    function searchFAQs(query) {
+      const faqs = document.querySelectorAll('.faq');
+      faqs.forEach(faq => {
+        const text = faq.textContent.toLowerCase();
+        faq.style.display = text.includes(query.toLowerCase()) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

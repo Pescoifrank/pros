@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collaboration Request</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-box, .thankyou-box {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .form-box.active, .thankyou-box.active {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .thankyou-box h1 {
+      color: #28a745;
+    }
+
+    .thankyou-box a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .thankyou-box a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Collaboration Form -->
+  <div class="form-box active" id="formBox">
+    <h2>Collaboration Request</h2>
+    <form id="collabForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required>
+
+      <label for="field">Field of Interest:</label>
+      <select id="field" required>
+        <option value="">-- Choose Field --</option>
+        <option value="Programming">Programming</option>
+        <option value="Web Design">Web Design</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+        <option value="Information Science">Information Science</option>
+        <option value="Communication">Communication</option>
+      </select>
+
+      <label for="message">Purpose of Collaboration:</label>
+      <textarea id="message" placeholder="Tell us how you want to collaborate..." required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <!-- Thank You Message -->
+  <div class="thankyou-box" id="thankyouBox">
+    <h1>🎉 Thank You!</h1>
+    <p>Your collaboration request has been received and will be reviewed shortly.</p>
+    <a href="homebar.html">Return Home</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('collabForm');
+    const formBox = document.getElementById('formBox');
+    const thankyouBox = document.getElementById('thankyouBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const field = document.getElementById('field').value;
+      const message = document.getElementById('message').value.trim();
+
+      // Basic validation
+      if (name && email && field && message) {
+        formBox.classList.remove('active');
+        thankyouBox.classList.add('active');
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  </script>
+
+</body>
+</html>
